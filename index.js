@@ -124,4 +124,5 @@ function setYourGoal() {
       msg3.innerText = "nap-time :" + val3 + "pm -" + parseInt(val3 + 1) + "am";
     }
   }
+  document.querySelector(".dynamic-box").style.display="block";
 }
