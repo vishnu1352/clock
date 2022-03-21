@@ -1,4 +1,4 @@
-setYourGoal();
+
 var x, y, z;
 function myClock() {
   let time = new Date();
