@@ -1,3 +1,4 @@
+setYourGoal();
 var x, y, z;
 function myClock() {
   let time = new Date();
@@ -38,25 +39,31 @@ function myClock() {
   newsettime();
 }
 
-setInterval(myClock, 1000);
+
 
 function newsettime() {
   let hrs = new Date().getHours();
-  if (x == hrs) {
-    document.querySelector("#right-inner1").innerText =
-      "Let's Have Some Breakfast";
+  let x1= document.querySelector("#wake-up-time").value;
+  let y1= document.querySelector("#lunch-time").value;
+  let z1 = document.querySelector("#nap-time").value;
+  console.log(x1, y1, z1);
+  console.log(typeof hrs)
+  console.log(typeof x1);
+  if (x1 == hrs) {
+    // document.querySelector("#right-inner1").innerText =
+    //   "Let's Have Some Breakfast";
     document.querySelector("#right-inner2").style.backgroundImage =
       "url(./images/wakeup.jpg)";
   }
-  if (y == hrs) {
-    document.querySelector("#right-inner1").innerText = "Let's Have Some Food";
+  if (y1 == hrs) {
+    //document.querySelector("#right-inner1").innerText = "Let's Have Some Food";
     document.querySelector("#right-inner2").style.backgroundImage =
-      "url(./images/lunch_image.png)";
+      "url(./images/lunch.jpg)";
   }
-  if (z == hrs) {
-    document.querySelector("#right-inner1").innerText = "Let's Go For Sleep";
+  if (z1 == hrs) {
+    //document.querySelector("#right-inner1").innerText = "Let's Go For Sleep";
     document.querySelector("#right-inner2").style.backgroundImage =
-      "url(./images/nap_image.png)";
+      "url(./images/sleep.jpg)";
   }
 }
 
@@ -67,6 +74,7 @@ function setYourGoal() {
   x = val1;
   y = val2;
   z = val3;
+  
 
   let msg1 = document.querySelector(".div1");
   let msg2 = document.querySelector(".div2");
@@ -126,3 +134,4 @@ function setYourGoal() {
   }
   document.querySelector(".dynamic-box").style.display="block";
 }
+setInterval(myClock, 1000);
